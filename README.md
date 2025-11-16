@@ -119,17 +119,20 @@ The API provides the following endpoints:
 ### Import Points and Detect Squares
 
 1. **Import points that form a square:**
+
+   **Windows PowerShell:**
+   ```powershell
+   curl.exe -X POST "http://localhost:5281/api/Points/import" -H "Content-Type: application/json" -d "{\"points\":[{\"x\":0,\"y\":0},{\"x\":1,\"y\":0},{\"x\":1,\"y\":1},{\"x\":0,\"y\":1}]}"
+   ```
+
+   **Or using Invoke-RestMethod (PowerShell native):**
+   ```powershell
+   Invoke-RestMethod -Uri "http://localhost:5281/api/Points/import" -Method Post -ContentType "application/json" -Body '{"points":[{"x":0,"y":0},{"x":1,"y":0},{"x":1,"y":1},{"x":0,"y":1}]}'
+   ```
+
+   **Linux/Mac/Git Bash:**
    ```bash
-   curl -X POST "http://localhost:5281/api/Points/import" \
-     -H "Content-Type: application/json" \
-     -d '{
-       "points": [
-         {"x": 0, "y": 0},
-         {"x": 1, "y": 0},
-         {"x": 1, "y": 1},
-         {"x": 0, "y": 1}
-       ]
-     }'
+   curl -X POST "http://localhost:5281/api/Points/import" -H "Content-Type: application/json" -d '{"points":[{"x":0,"y":0},{"x":1,"y":0},{"x":1,"y":1},{"x":0,"y":1}]}'
    ```
 
 2. **Retrieve detected squares:**
