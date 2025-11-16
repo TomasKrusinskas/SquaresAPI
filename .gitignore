@@ -1,0 +1,10 @@
+# Build outputs
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+
+# IDE files
+.vs/
+.idea/
+*.user
