@@ -261,13 +261,3 @@ Swagger UI is only available in Development environment. Ensure:
 
 1. `ASPNETCORE_ENVIRONMENT` is set to `Development`
 2. Or modify `Program.cs` to enable Swagger in all environments
-
-## Additional Resources
-
-For detailed testing instructions, see `MANUAL_TESTING.md`.
-
-For code improvement suggestions, see `IMPROVEMENTS.md`.
-
-## License
-
-This project is provided as-is for demonstration purposes.
